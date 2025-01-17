@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Subtopik 4.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+        }
+        header {
+            background: whitesmoke;
+            color: rgb(69, 69, 69);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .branding {
+            text-align: left;
+        }
+        header .branding h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header .branding p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        /* Action Icons */
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .action-buttons button {
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .action-buttons button img {
+            width: 20px;
+            height: 20px;
+        }
+        .action-buttons button:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.1);
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow multiple rows if necessary */
+            gap: 20px; /* Space between cards */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: calc(100vh - 150px); /* Adjust to exclude header/footer height */
+            margin: 0 auto; /* Center horizontally if smaller than viewport */
+            padding: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px; /* Fixed width */
+            height: 400px; /* Fixed height */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: space-between; /* Evenly space content */
+            text-align: center; /* Center text */
+            padding: 10px;
+        }
+        /* Card Image */
+        .card img {
+            max-width: 100%; /* Ensures the image fits within the card width */
+            max-height: 50%; /* Adjust height to fit within the card */
+            object-fit: contain; /* Ensures the full image is visible without cropping */
+            margin-bottom: 10px; /* Adds space between image and text */
+        }
+        /* Card Content */
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            -items: center;
+        }
+        .card-content h3 {
+            margin: 0;
+            font-size: 18px;
+            color: rgb(69, 69, 69);
+        }
+        .card-content p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: white;
+            color: rgb(69, 69, 69);
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Branding -->
+        <div class="branding">
+            <h1>Digital Learning Kit</h1>
+            <p>Kuiz.</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <a href="kitMedia_backup.html" style="text-decoration: none;">
+        <div class="action-buttons">
+            <button title="Options">
+                <img src="left.png" alt="Back Icon">
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <iframe 
+            src="https://quizizz.com/embed/quiz/6784740937321b19db04a730" 
+            width="100%" 
+            height="600px" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Kit Media Pembelajaran Encik Hafizuddin. Hak Cipta Terpelihara.
+    </footer>
+
+</body>
+</html>

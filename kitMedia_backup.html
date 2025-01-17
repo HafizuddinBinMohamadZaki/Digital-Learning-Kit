@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Media Pembelajaran</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            background-size: cover;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background: whitesmoke;
+            color: rgb(69, 69, 69);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        header .branding {
+            text-align: left;
+        }
+        header .branding h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header .branding p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        /* Action Icons */
+        .action-buttons {
+            display: flex;
+            align-items: left;
+            gap: 15px;
+        }
+        .action-buttons button {
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .action-buttons button img {
+            width: 20px;
+            height: 20px;
+        }
+        .action-buttons button:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.1);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position the dropdown below the button */
+            right: 0;  /* Align the dropdown to the right edge of the button */
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            z-index: 1000;
+            min-width: 150px;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow multiple rows if necessary */
+            gap: 20px; /* Space between cards */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: calc(100vh - 150px); /* Adjust to exclude header/footer height */
+            margin: 0 auto; /* Center horizontally if smaller than viewport */
+            padding: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px; /* Fixed width */
+            height: 400px; /* Fixed height */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: space-between; /* Evenly space content */
+            text-align: center; /* Center text */
+            padding: 10px;
+            animation: popUp 0.8s ease-in-out;
+        }
+
+        @keyframes popUp {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Card Image */
+        .card img {
+            max-width: 100%; /* Ensures the image fits within the card width */
+            max-height: 50%; /* Adjust height to fit within the card */
+            object-fit: contain; /* Ensures the full image is visible without cropping */
+            margin-bottom: 10px; /* Adds space between image and text */
+            transition: transform 0.3s;
+        }
+        .card img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Card Content */
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-content h3 {
+            margin: 0;
+            font-size: 18px;
+            color: rgb(69, 69, 69);
+        }
+        .card-content p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: white;
+            color: rgb(69, 69, 69);
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Branding -->
+        <div class="branding">
+            <h1>Digital Learning Kit</h1>
+            <p>Topik 4: Kod Arahan.</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button id="dropdownButton" title="Options">
+                <img src="menu.png" alt="Options Icon">
+            </button>
+            <div class="dropdown" id="dropdownMenu">
+                <a href="profil.html">Profil</a>
+                <a href="mengenai.html">Mengenai</a>
+                <a href="#" id="playStopButton">Main Musik</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Audio element for background music -->
+    <audio id="backgroundMusic" src="main_music.mp3" preload="auto"></audio>
+
+    <script>
+        // Dropdown toggle functionality
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        dropdownButton.addEventListener('click', () => {
+            const isVisible = dropdownMenu.style.display === 'block';
+            dropdownMenu.style.display = isVisible ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+
+        // Play/Stop button functionality
+        const audio = document.getElementById('backgroundMusic');
+        const playStopButton = document.getElementById('playStopButton');
+        let isPlaying = false;
+
+        playStopButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            if (isPlaying) {
+                audio.pause();
+                playStopButton.textContent = "Main Musik";
+            } else {
+                audio.play().catch(error => {
+                    console.error("Error playing audio: ", error);
+                });
+                playStopButton.textContent = "Henti Musik";
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Card 1 -->
+        <a href="subtopik_4.1.html" style="text-decoration: none;">
+            <div class="card">
+                <img src="Kod Arahan.png" style="border-radius: 10px" alt="Kod Arahan">
+                <div class="card-content">
+                    <h3>4.1 Kod Arahan</h3>
+                    <p>Belajar tentang konsep di dalam sesebuah atur cara dan bagaimana ia dapat dihasilkan.</p>
+                </div>
+            </div>
+        </a>
+        
+        <!-- Card 2 -->
+        <a href="imbas_ringkas.html" style="text-decoration: none;">
+            <div class="card">
+                <img src="Imbas Ringkas.png" style="border-radius: 10px" alt="Imbas Ringkas">
+                <div class="card-content">
+                    <h3>Imbas Ringkas</h3>
+                    <p>Ulang kaji secara pantas dalam topik Kod Arahan.</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="kuiz.html" style="text-decoration: none;">
+            <div class="card">
+                <img src="Kuiz.png" style="border-radius: 10px" alt="Kuiz">
+                <div class="card-content">
+                    <h3>Kuiz</h3>
+                    <p>Uji kefahaman anda dalam bentuk kuiz yang interaktif.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Kit Media Pembelajaran Encik Hafizuddin. Hak Cipta Terpelihara.
+    </footer>
+</body>
+</html>

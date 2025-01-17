@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Hafizuddin Bin Mohamad Zaki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background: whitesmoke;
+            color: rgb(69, 69, 69);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        
+        header .branding {
+            text-align: left;
+        }
+        header .branding h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header .branding p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .action-buttons button {
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .action-buttons button img {
+            width: 20px;
+            height: 20px;
+        }
+        .action-buttons button:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.1);
+        }
+
+        /* Resume Container Styles */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: slideDown 0.8s ease-out;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        .header p {
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .contact div {
+            width: 48%;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+
+        .section-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 5px 10px;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .education, .experience {
+            margin-bottom: 20px;
+        }
+        .education ul, .experience ul {
+            list-style: none;
+            padding: 0;
+        }
+        .education li, .experience li {
+            margin-bottom: 10px;
+        }
+        .experience .job-title, .education .degree {
+            font-weight: bold;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            background-color: #ecf0f1;
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .centered-image-container {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: 100%; /* Ensures the container has enough height */
+        }
+
+        .rounded-image {
+            width: 200px;  /* Fixed width */
+            height: 300px; /* Fixed height */
+            border-radius: 15px;  /* Rounded corners */
+            object-fit: cover;  /* Ensures the image covers the area without distortion */
+            margin-top: 20px;
+         }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="branding">
+        <h1>Digital Learning Kit</h1>
+        <p>Profil</p>
+    </div>
+
+    <a href="kitMedia_backup.html" style="text-decoration: none;">
+        <div class="action-buttons">
+            <button title="Options">
+                <img src="left.png" alt="Back Icon">
+            </button>
+        </div>
+    </a>
+</header>
+
+<div class="centered-image-container">
+    <img src="profile_picture2.png" alt="Example Image" class="rounded-image">
+</div>
+
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Hafizuddin Bin Mohamad Zaki</h1>
+        <p>Guru Asas Sains Komputer</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <div>
+            <p><strong>Email:</strong> hbmzha@gmail.com</p>
+            <p><strong>No. Tel:</strong> 018-4085139</p>
+        </div>
+        <div>
+            <p><strong>Alamat:</strong> 1260 Mukim 20, Kubang Semang, 14400 Bukit Mertajam, Pulau Pinang.</p>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="education">
+        <div class="section-title">Pendidikan</div>
+        <ul>
+            <li>
+                <p class="degree">Ijazah Sarjana Muda Pendidikan Teknologi Maklumat</p>
+                <p><strong>Universiti Pendidikan Sultan Idris</strong></p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills">
+        <div class="section-title">Kemahiran Perisian dan Bahasa Aturcara</div>
+        <ul>
+            <li>Microsoft Office</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>HTML</li>
+            <li>VSCode</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Kit Media Pembelajaran Encik Hafizuddin. Hak Cipta Terpelihara.</p>
+    </div>
+</div>
+
+</body>
+</html>
